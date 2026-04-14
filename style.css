@@ -18,12 +18,20 @@ body {
   scroll-behavior: smooth;
   background-color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  :root {
+  --navbar-height: 70px;
+}
+
+body {
+  padding-top: var(--navbar-height);
 }
 
 
 /* Navbar base */
 .navbar {
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0,0,0,0.85) !important;
 }
 
 /* Logo */
