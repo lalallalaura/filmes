@@ -2,79 +2,39 @@
   --navbar-height: 70px;
 }
 
-/* BODY */
 body {
-  scroll-behavior: smooth;
-  background-color: #000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: var(--navbar-height);
+  background: #000;
   color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: var(--navbar-height);
 }
 
 /* HERO */
 .titulo {
-  margin-top: 40px;
   font-size: 2rem;
-  font-weight: 700;
   text-align: center;
+  margin-top: 40px;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #aaa;
   text-align: center;
+  color: #aaa;
   margin-top: 10px;
 }
 
-/* NAVBAR */
+/* NAV */
 .navbar {
+  background: rgba(0,0,0,0.85) !important;
   backdrop-filter: blur(10px);
-  background-color: rgba(0,0,0,0.85) !important;
-  transition: all 0.3s ease;
-}
-
-.navbar-brand {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.nav-hover {
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav-hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #0d6efd;
-  transition: 0.3s;
-}
-
-.nav-hover:hover::after {
-  width: 100%;
-}
-
-.nav-hover:hover {
-  color: #0d6efd !important;
 }
 
 /* CARDS */
 .card {
+  background: #1a1a1a;
   border: none;
   border-radius: 15px;
-  overflow: hidden;
-  background-color: #1a1a1a;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(255,255,255,0.1);
+  height: 100%;
 }
 
 .card-img-top {
@@ -83,28 +43,12 @@ body {
 }
 
 .card-body {
-  background-color: #1a1a1a;
-  color: #fff;
+  background: #1a1a1a;
+  color: white;
 }
 
-/* LINKS DOS CARDS */
 .card-link {
   text-decoration: none;
   color: inherit;
   display: block;
-}
-
-/* CAROUSEL */
-.carousel-item img {
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 50px;
 }
