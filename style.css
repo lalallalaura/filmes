@@ -1,31 +1,30 @@
 .titulo {
   margin-top: 40px;
   font-weight: 700;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
   text-shadow: 0 1px 0 rgba(91, 91, 91, 0.05);
-  
 }
 
-
+/* Subtítulo */
 .subtitulo {
   color: #ffffff;
   font-size: 5.5rem !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ROOT (corrigido - fora do body) */
+:root {
+  --navbar-height: 70px;
+}
+
+/* BODY */
 body {
   scroll-behavior: smooth;
   background-color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  :root {
-  --navbar-height: 70px;
-}
-
-body {
   padding-top: var(--navbar-height);
 }
-
 
 /* Navbar base */
 .navbar {
@@ -46,7 +45,7 @@ body {
   transition: 0.3s;
 }
 
-/* Efeito hover bonito */
+/* Hover underline */
 .nav-hover::after {
   content: "";
   position: absolute;
@@ -62,57 +61,61 @@ body {
   width: 100%;
 }
 
-/* Hover do texto */
 .nav-hover:hover {
   color: #0d6efd !important;
 }
 
-/* Navbar no mobile */
+/* Mobile navbar */
 @media (max-width: 991px) {
   .navbar-nav {
     padding-top: 15px;
   }
 }
 
-
-
+/* CARDS */
 .card {
   border: none;
   border-radius: 20px;
   overflow: hidden;
   background-color: #1a1a1a;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
-  .card-body {
+
+/* Card body */
+.card-body {
   background-color: #ffffff;
   padding: 20px;
 }
-  .card-link {
+
+/* Link do card */
+.card-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
+/* Carousel */
 .carousel-item img {
-  height: 400px;        /* altura desejada */
+  height: 400px;
   width: 70%;
-  object-fit: cover;    
-  object-position: center; 
-  border-radius: 10px;  
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
   letter-spacing: 0.5px;
   background-color: #000000;
-  
 }
