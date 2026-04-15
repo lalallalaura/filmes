@@ -58,63 +58,47 @@ body {
   transform: translateY(0);
 }
 
-/* ===== CARDS (SEU ESTILO ORIGINAL + FIX) ===== */
+/* ===== CARDS LIMPOS E BONITOS ===== */
 
 .card {
   background: rgba(255,255,255,0.05);
   border: none;
   border-radius: 15px;
+  overflow: hidden;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  height: 100%;
 }
 
 /* imagem */
 .card-img-top {
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 220px;
   object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
-/* corpo do card */
+/* corpo */
 .card-body {
-  background: rgba(0,0,0,0.6); /* 👈 isso resolve o contraste */
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  padding: 20px;
+}
+
+/* título */
+.card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 /* texto */
-.card h3 {
-  color: #ffffff;
-  font-weight: bold;
-}
-
 .card p {
-  color: #e5e5e5;
+  color: #ccc;
+  font-size: 0.9rem;
 }
 
 /* hover */
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-
-/* brilho */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 15px;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent);
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.card:hover::before {
-  opacity: 1;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 /* TITULOS */
