@@ -58,6 +58,47 @@ body {
   transform: translateY(0);
 }
 
+.sobre-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.sobre-card p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.sobre-card .intro {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.sobre-card span {
+  color: #8b5cf6;
+  font-weight: bold;
+}
+
+/* skills */
+.skills {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
 /* ===== CARDS LIMPOS E BONITOS ===== */
 
 .card {
