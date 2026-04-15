@@ -98,6 +98,32 @@ body {
   font-size: 0.85rem;
   color: #ddd;
 }
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+/* linha roxa embaixo */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #8b5cf6;
+  border-radius: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
 
 /* ===== CARDS LIMPOS E BONITOS ===== */
 
