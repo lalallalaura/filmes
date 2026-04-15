@@ -27,10 +27,12 @@
       opacity: 0.7;
     }
 
+    /* EFEITO SUAVE */
     #slider {
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
+    /* CARDS */
     .card {
       transition: transform 0.3s ease;
     }
@@ -58,10 +60,10 @@
 
     <div class="collapse navbar-collapse" id="menuNavbar">
       <ul class="navbar-nav ms-auto text-center">
-        <li class="nav-item"><a class="nav-link nav-hover" href="#">Início</a></li>
-        <li class="nav-item"><a class="nav-link nav-hover" href="#">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link nav-hover" href="#">Projetos</a></li>
-        <li class="nav-item"><a class="nav-link nav-hover" href="#">Contato</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
       </ul>
     </div>
   </div>
@@ -102,34 +104,18 @@
   </div>
 </div>
 
-  <div class="container mt-5">
-  <div class="row">
-    <div class="col-12">
+<!-- TEXTO PRA GERAR SCROLL -->
+<div class="container mt-5">
+  <h2>Teste de Scroll</h2>
 
-      <h2>Teste de Scroll</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-    </div>
-  </div>
+  <!-- espaço extra pra scroll -->
+  <div style="height: 1000px;"></div>
 </div>
 
 <!-- CARDS -->
@@ -183,11 +169,11 @@ window.addEventListener("scroll", () => {
 
   let scrollY = window.scrollY;
 
-  let opacity = 1 - scrollY / 500;
+  let opacity = 1 - scrollY / 300;
   if (opacity < 0) opacity = 0;
 
   slider.style.opacity = opacity;
-  slider.style.transform = `translateY(${scrollY * 0.2}px)`;
+  slider.style.transform = `translateY(${scrollY * 0.25}px)`;
 });
 </script>
 
