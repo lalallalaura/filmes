@@ -4,9 +4,12 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1a1a2e, #0f0f0f 70%);
+  background:
+    radial-gradient(circle at 20% 20%, #2a1a4a 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, #1a2a4a 0%, transparent 40%),
+    radial-gradient(circle at bottom, #0f0f0f, #0a0a0f);
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: system-ui, sans-serif;
   padding-top: var(--navbar-height);
 }
 
