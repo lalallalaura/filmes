@@ -111,14 +111,13 @@ body {
   position: relative;
 }
 
-/* linha roxa embaixo */
 .section-title::after {
   content: "";
   display: block;
-  width: 80px;
-  height: 3px;
-  margin: 10px auto 0;
-  background: #8b5cf6;
+  width: 70px;
+  height: 4px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, #8b5cf6, #00d4ff);
   border-radius: 10px;
 }
 
