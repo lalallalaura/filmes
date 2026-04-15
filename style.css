@@ -112,10 +112,9 @@ body {
    ANIMAÇÃO SCROLL
 ======================= */
 .fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
 }
+
 
 .fade-in.show {
   opacity: 1;
@@ -212,15 +211,11 @@ body {
 /* =======================
    CARDS
 ======================= */
+/* hover mais premium nos cards */
 .card {
-  background: rgba(255,255,255,0.05);
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  height: 100%;
+  transform: translateZ(0);
 }
+
 
 .card-img-top {
   width: 100%;
@@ -244,10 +239,8 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transform: translateY(-10px) scale(1.02);
 }
-
 /* =======================
    FOOTER
 ======================= */
