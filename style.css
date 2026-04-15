@@ -15,9 +15,15 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
+  background: rgba(15, 15, 25, 0.95);
+  transition: all 0.4s ease;
+}
+
+/* quando desce a página */
+.navbar.scrolled {
+  background: rgba(15, 15, 25, 0.25);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar-brand {
