@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #000;
+  background: radial-gradient(circle at top, #1a1a2e, #0f0f0f 70%);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   padding-top: var(--navbar-height);
@@ -11,9 +11,9 @@ body {
 
 /* HERO */
 .titulo {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 40px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
 .subtitle {
@@ -48,7 +48,9 @@ body {
 }
 
 .slider {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
 .slider img {
