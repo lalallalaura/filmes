@@ -16,50 +16,14 @@ body {
 /* NAVBAR */
 .navbar {
   background: rgba(15, 15, 25, 0.95);
-  transition: background 0.5s ease, backdrop-filter 0.5s ease;
+  transition: 0.4s ease;
 }
 
-/* quando desce a página */
 .navbar.scrolled {
   background: rgba(15, 15, 25, 0.25);
   backdrop-filter: blur(20px);
-  border-bottom: none;
 }
 
-.navbar-brand {
-  color: var(--primary) !important;
-  font-weight: bold;
-}
-.navbar-nav .nav-link {
-  position: relative;
-  color: #fff;
-  transition: 0.3s ease;
-}
-
-/* linha roxa escondida */
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: #8b5cf6;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-/* hover ativa a linha */
-.navbar-nav .nav-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/* opcional: cor no hover */
-.navbar-nav .nav-link:hover {
-  color: #8b5cf6;
-}
 /* HERO */
 .hero {
   height: 100vh;
@@ -67,10 +31,8 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
 }
 
-/* glow roxo atrás */
 .hero-glow {
   position: absolute;
   width: 500px;
@@ -83,7 +45,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* texto em cima */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -92,47 +53,24 @@ body {
 .titulo {
   font-size: 4rem;
   font-weight: 800;
-  letter-spacing: 2px;
-
-  /* brilho leve */
-  text-shadow:
-    0 0 20px rgba(139,92,246,0.6),
-    0 0 60px rgba(139,92,246,0.3);
+  text-shadow: 0 0 30px rgba(139,92,246,0.5);
 }
 
 .subtitle {
   color: #bbb;
-  margin-top: 10px;
 }
-/* animação suave */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
 /* SLIDER */
 #slider {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-#slider img {
-  height: 400px;
-  object-fit: cover;
-}
-
-/* ANIMAÇÃO */
+/* FADE */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 0.8s ease;
 }
 
 .fade-in.show {
@@ -140,53 +78,42 @@ body {
   transform: translateY(0);
 }
 
+/* SOBRE */
 .sobre-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
   padding: 30px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .sobre-card p {
   color: #ccc;
-  line-height: 1.6;
-}
-
-.sobre-card .intro {
-  font-size: 1.1rem;
-  color: #fff;
 }
 
 .sobre-card span {
-  color: #8b5cf6;
-  font-weight: bold;
+  color: var(--primary);
 }
 
-/* skills */
+/* SKILLS */
 .skills {
-  margin-top: 15px;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .skills span {
-  background: rgba(139, 92, 246, 0.15);
-  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(139,92,246,0.15);
   padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  color: #ddd;
 }
+
+/* TITULOS */
 .section-title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 5px;
-  position: relative;
 }
 
 .section-title::after {
@@ -194,127 +121,51 @@ body {
   display: block;
   width: 70px;
   height: 4px;
-  margin: 12px auto 0;
+  margin: 10px auto;
   background: linear-gradient(90deg, #8b5cf6, #00d4ff);
-  border-radius: 10px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #aaa;
-  font-size: 0.95rem;
-  margin-bottom: 25px;
-}
-
-/* ===== CARDS LIMPOS E BONITOS ===== */
-
-.card {
-  background: rgba(255,255,255,0.05);
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-/* imagem */
-.card-img-top {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-/* corpo */
-.card-body {
-  padding: 20px;
-}
-
-/* título */
-.card h3 {
-  color: #fff;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-/* texto */
-.card p {
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-/* hover */
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-}
-
-/* TITULOS */
-h2 {
-  color: var(--primary);
 }
 
 /* FOOTER */
 .footer {
-  background: transparent;
   padding: 60px 0;
 }
 
-/* CARD DENTRO DO FOOTER */
 .contact-card {
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(15px);
-  border-radius: 24px;
-  padding: 50px 30px;
+  border-radius: 20px;
+  padding: 40px;
   text-align: center;
-  box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  backdrop-filter: blur(15px);
 }
 
-/* texto */
-.contact-text {
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-/* botão */
 .contact-btn {
   display: inline-block;
+  margin-top: 10px;
   background: #8b5cf6;
-  color: white;
-  padding: 12px 22px;
-  border-radius: 12px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
 }
 
-.contact-btn:hover {
-  background: #a78bfa;
-  transform: scale(1.05);
-}
-
-/* links sociais */
 .contact-links {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .contact-links a {
   color: #aaa;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .contact-links a:hover {
   color: #8b5cf6;
 }
 
-/* copyright */
 .copyright {
-  margin-top: 30px;
-  font-size: 0.8rem;
+  margin-top: 20px;
+  font-size: 12px;
   color: #666;
 }
