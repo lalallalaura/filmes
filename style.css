@@ -58,63 +58,60 @@ body {
   transform: translateY(0);
 }
 
-/* ===== CARDS ESTILO NETFLIX ===== */
+/* ===== CARDS (SEU ESTILO ORIGINAL + FIX) ===== */
 
 .card {
+  background: rgba(255,255,255,0.05);
   border: none;
   border-radius: 15px;
-  overflow: hidden;
-  background: none;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* container da imagem */
-.card-img-wrapper {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
 }
 
 /* imagem */
-.card-img-wrapper img {
-  width: 100%;
-  height: 400px;
+.card-img-top {
+  height: 250px;
   object-fit: cover;
-  display: block;
 }
 
-/* overlay escuro */
-.card-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.5),
-    transparent
-  );
-
-  color: #fff;
+/* corpo do card */
+.card-body {
+  background: rgba(0,0,0,0.6); /* 👈 isso resolve o contraste */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 /* texto */
-.card-overlay h3 {
-  margin: 0;
-  font-size: 1.4rem;
+.card h3 {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.card-overlay p {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
+.card p {
   color: #e5e5e5;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* brilho */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 /* TITULOS */
