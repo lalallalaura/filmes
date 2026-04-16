@@ -76,6 +76,31 @@ body.light .navbar {
   color: var(--primary);
 }
 
+.nav-link {
+  position: relative;
+  color: var(--text);
+}
+
+/* LINHA ANIMADA */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary);
+}
+
 section {
   scroll-margin-top: 90px;
 }
