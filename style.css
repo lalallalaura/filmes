@@ -18,15 +18,33 @@ body.light {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui;
+  font-family: 'Inter', sans-serif;
   padding-top: 70px;
   transition: 0.4s;
+}
+
+/* TIPOGRAFIA */
+h1, h2, h3, .titulo {
+  font-family: 'Poppins', sans-serif;
+}
+
+.titulo {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
 }
 
 /* NAVBAR */
 .navbar {
   background: rgba(0,0,0,0.8);
-  transition: 0.3s;
 }
 
 body.light .navbar {
@@ -50,11 +68,6 @@ body.light .navbar {
   color: var(--primary);
 }
 
-.navbar-toggler {
-  border: none;
-  color: var(--text);
-}
-
 /* HERO */
 .hero {
   height: 100vh;
@@ -71,10 +84,6 @@ body.light .navbar {
   background: var(--primary);
   filter: blur(150px);
   opacity: 0.3;
-}
-
-.titulo {
-  font-size: 4rem;
 }
 
 /* FADE */
@@ -135,15 +144,13 @@ body.light .navbar {
   padding: 10px 20px;
   border-radius: 10px;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
 }
 
 .contact-btn:hover {
   opacity: 0.8;
 }
 
-/* BOTÃO TEMA */
+/* BOTÃO */
 #themeToggle {
   border: 1px solid var(--border);
   color: var(--text);
