@@ -34,7 +34,7 @@ body.light .navbar {
 
 .navbar.scrolled {
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
 }
 
 .nav-link {
