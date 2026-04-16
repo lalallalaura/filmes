@@ -1,34 +1,47 @@
 :root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
   --primary: #8b5cf6;
-  --navbar-height: 70px;
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg: #f5f5f5;
+  --text: #111;
+  --card: rgba(0,0,0,0.05);
+  --border: rgba(0,0,0,0.1);
+  --primary: #7c3aed;
 }
 
 /* =======================
    BASE
 ======================= */
 body {
-  background:
-    radial-gradient(circle at 20% 20%, #2a1a4a 0%, transparent 40%),
-    radial-gradient(circle at 80% 30%, #1a2a4a 0%, transparent 40%),
-    radial-gradient(circle at bottom, #0f0f0f, #0a0a0f);
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
   font-family: system-ui, sans-serif;
-  padding-top: var(--navbar-height);
+  padding-top: 70px;
   margin: 0;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 /* =======================
    NAVBAR
 ======================= */
 .navbar {
-  background: rgba(15, 15, 25, 0.95);
-  transition: 0.4s ease;
+  background: rgba(15, 15, 25, 0.9);
+  transition: 0.4s;
+}
+
+body.light .navbar {
+  background: rgba(255,255,255,0.9);
 }
 
 .navbar.scrolled {
-  background: rgba(15, 15, 25, 0.25);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar-brand {
@@ -37,9 +50,8 @@ body {
 }
 
 .navbar-nav .nav-link {
+  color: var(--text);
   position: relative;
-  color: #fff;
-  transition: 0.3s;
 }
 
 .navbar-nav .nav-link::after {
@@ -51,13 +63,11 @@ body {
   height: 2px;
   background: var(--primary);
   transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
 
 .navbar-nav .nav-link:hover::after {
   transform: scaleX(1);
-  transform-origin: left;
 }
 
 .navbar-nav .nav-link:hover {
@@ -81,19 +91,16 @@ body {
   height: 500px;
   background: var(--primary);
   filter: blur(160px);
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .titulo {
   font-size: 4rem;
   font-weight: 800;
-  text-shadow:
-    0 0 20px rgba(139,92,246,0.6),
-    0 0 60px rgba(139,92,246,0.3);
 }
 
 .subtitle {
-  color: #bbb;
+  opacity: 0.7;
 }
 
 /* =======================
@@ -102,7 +109,7 @@ body {
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 0.8s;
 }
 
 .fade-in.show {
@@ -127,16 +134,11 @@ body {
    SOBRE
 ======================= */
 .sobre-card {
-  background: rgba(255,255,255,0.05);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 20px;
   padding: 30px;
   backdrop-filter: blur(10px);
-}
-
-.skills {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 
 .skills span {
@@ -146,73 +148,37 @@ body {
 }
 
 /* =======================
-   TITULOS
-======================= */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.section-title::after {
-  content: "";
-  width: 70px;
-  height: 4px;
-  display: block;
-  margin: 10px auto;
-  background: linear-gradient(90deg, var(--primary), #00d4ff);
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #aaa;
-}
-
-/* =======================
-   CARDS (BONITOS)
+   CARDS
 ======================= */
 .card {
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.06),
-    rgba(255,255,255,0.02)
-  );
-  border: 1px solid rgba(255,255,255,0.08);
   transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
 .card-img-top {
   height: 220px;
   object-fit: cover;
-  filter: brightness(0.85);
   transition: 0.4s;
 }
 
 .card:hover .card-img-top {
   transform: scale(1.08);
-  filter: brightness(1);
-}
-
-.card-body {
-  padding: 20px;
 }
 
 .card h3 {
-  color: #fff;
-}
-
-.card:hover h3 {
-  color: var(--primary);
+  color: var(--text);
 }
 
 .card p {
-  color: #aaa;
+  color: #888;
 }
 
 /* =======================
@@ -223,7 +189,8 @@ body {
 }
 
 .contact-card {
-  background: rgba(255,255,255,0.05);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 20px;
   padding: 40px;
   text-align: center;
@@ -237,15 +204,8 @@ body {
   text-decoration: none;
 }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
 .contact-links a {
-  color: #aaa;
+  color: #888;
 }
 
 .contact-links a:hover {
