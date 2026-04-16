@@ -23,7 +23,6 @@ body {
   transition: 0.4s;
   padding-bottom: 60px;
 }
-}
 
 /* TIPOGRAFIA */
 h1, h2, h3, .titulo {
@@ -46,7 +45,14 @@ p {
 
 /* NAVBAR */
 .navbar {
-  background: rgba(0,0,0,0.8);
+  background: transparent;
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(15,15,15,0.9);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 body.light .navbar {
@@ -68,6 +74,10 @@ body.light .navbar {
 
 .nav-link:hover {
   color: var(--primary);
+}
+
+section {
+  scroll-margin-top: 90px;
 }
 
 /* HERO */
