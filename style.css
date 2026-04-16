@@ -100,31 +100,59 @@ body.light .navbar {
 
 /* CARD */
 .card {
-  background: var(--card);
+  background: rgba(255,255,255,0.05);
   border: 1px solid var(--border);
   border-radius: 20px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFEITO DE LUZ (ANTES DO HOVER) */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.25), transparent 70%);
+  opacity: 0;
   transition: 0.4s;
 }
 
+/* HOVER PRINCIPAL */
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px) scale(1.02);
+  border: 1px solid rgba(139,92,246,0.5);
+  box-shadow:
+    0 0 15px rgba(139,92,246,0.3),
+    0 0 40px rgba(139,92,246,0.2),
+    0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* ATIVA O GLOW */
+.card:hover::before {
+  opacity: 1;
+}
+
+/* IMAGEM MAIS SUAVE */
 .card-img-top {
   height: 220px;
   object-fit: cover;
+  transition: 0.4s;
 }
 
-/* SOBRE */
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
+.card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
-.sobre-card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 20px;
+/* TEXTO MAIS VIVO NO HOVER */
+.card h3 {
+  transition: 0.3s;
+}
+
+.card:hover h3 {
+  color: var(--primary);
 }
 
 /* FOOTER */
