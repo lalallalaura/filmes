@@ -73,7 +73,7 @@ body.light .navbar {
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .nav-link {
@@ -81,6 +81,10 @@ body.light .navbar {
   color: var(--text);
 }
 
+.navbar-brand,
+.nav-link {
+  color: var(--text) !important;
+}
 /* LINHA ANIMADA */
 .nav-link::after {
   content: "";
