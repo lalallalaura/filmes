@@ -239,6 +239,7 @@ body.light .navbar {
 .footer {
   padding: 60px 0;
   margin-top: 80px;
+  margim-bottom:40px;
 }
 .footer p {
   opacity: 0.6;
