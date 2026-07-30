@@ -404,3 +404,19 @@ section {
   color: var(--text);
   border-radius: 10px;
 }
+/* TEXTO DOS CARDS */
+.card-title,
+.card h3 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.card-text,
+.card p {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.6;
+}
+
+.card .text-muted {
+    color: rgba(255,255,255,.65) !important;
+}
