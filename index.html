@@ -1,233 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio</title>
-
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-<!--ICONES FOOTER-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura | Portfólio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<style>html{scroll-behavior:smooth}</style>
 </head>
-
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#inicio">Meu Portfólio</a>
+<div class="container">
+<a class="navbar-brand fw-semibold" href="#inicio">Laura</a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="menuNavbar">
-      <ul class="navbar-nav ms-auto text-center">
-        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-      </ul>
-
-      <button id="themeToggle" class="btn btn-sm ms-3">🌙</button>
-    </div>
-  </div>
+<div class="collapse navbar-collapse" id="menuNavbar">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+<li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+<li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+<li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+</ul>
+<button id="themeToggle" class="btn btn-sm ms-lg-3 mt-3 mt-lg-0">🌙</button>
+</div>
+</div>
 </nav>
 
 <section id="inicio" class="hero">
-  <div class="hero-glow"></div>
+<div class="hero-glow"></div>
+<div class="container text-center">
+<h1 class="titulo fade-in">Laura</h1>
+<p class="subtitle fade-in">Desenvolvedora Front-end & Designer</p>
+<p class="lead text-secondary fade-in mx-auto" style="max-width:650px">
+Transformo interfaces em experiências intuitivas, unindo desenvolvimento web e design visual.
+</p>
 
-  <div class="container text-center">
-    <h1 class="titulo fade-in">Laura</h1>
-    <p class="subtitle fade-in">Transformo interfaces em experiências intuitivas, unindo desenvolvimento web e design visual.</p>
-    
-  </div>
+<div class="mt-4 fade-in">
+<a href="#projetos" class="contact-btn me-2">Ver Projetos</a>
+<a href="https://github.com/lalallalaura" target="_blank" class="social-btn d-inline-flex"><i class="bi bi-github"></i></a>
+</div>
+</div>
 </section>
 
+<section id="projetos" class="container py-5">
+<h2 class="section-title text-center mb-5 fade-in">Meus Projetos</h2>
 
+<div class="row justify-content-center g-4">
 
-  <div class="row g-4">
+<div class="col-lg-4 col-md-6 fade-in">
+<div class="card h-100">
+<img src="https://i.postimg.cc/1zT9KY9N/1.png" class="card-img-top">
+<div class="card-body">
+<h3 class="project-title"><a target="_blank" href="https://lalallalaura.github.io/horroshop/">Horror Shop</a></h3>
+<p>Template de e-commerce com visual dark, efeitos de glassmorphism e foco em uma interface moderna.</p>
+</div>
+</div>
+</div>
 
-    <div class="col-md-4 fade-in">
-      <div class="card h-100">
-        <img src="https://i.postimg.cc/1zT9KY9N/1.png" class="card-img-top">
-        <div class="card-body">
-         <h3 class="project-title">
-    <a href="https://lalallalaura.github.io/horroshop/" target="_blank">
-        Horror Shop (Template E-commerce)
-    </a>
-</h3>
-          <p>Visual Moderno: Uma interface escura, limpa e sofisticada, que utiliza contrastes em neon e efeitos de glassmorphism (vidro fosco) para dar profundidade e destacar o que realmente importa: o conteúdo!</p>
-        </div>
-      </div>
-    </div>
+<div class="col-lg-4 col-md-6 fade-in">
+<div class="card h-100">
+<img src="https://i.postimg.cc/nFgzKMz1/3.png" class="card-img-top">
+<div class="card-body">
+<h3 class="project-title"><a target="_blank" href="https://harmoody-lalallalauras-projects.vercel.app/">Harmoody</a></h3>
+<p>Projeto de TCC voltado à regulação emocional através da música utilizando análise de sentimentos.</p>
+</div>
+</div>
+</div>
 
-    <div class="col-md-4 fade-in">
-      <div class="card h-100">
-        <img src="https://i.postimg.cc/nFgzKMz1/3.png" class="card-img-top">
-        <div class="card-body">
-          <h3 class="project-title">
-    <a href="https://harmoody-lalallalauras-projects.vercel.app/" target="_blank">
-        Harmoody 
-    </a>
-</h3>
-          <p>Plataforma web desenvolvida como Trabalho de Conclusão de Curso (TCC) com foco em regulação emocional por meio da música. O projeto combina técnicas de Processamento de Linguagem Natural (NLP) e análise de características musicais para identificar estados emocionais dos usuários e recomendar músicas adequadas para cada contexto..</p>
-        </div>
-      </div>
-    </div>
+<div class="col-lg-4 col-md-6 fade-in">
+<div class="card h-100">
+<img src="https://i.postimg.cc/Fr8Rb1Rp/2.png" class="card-img-top">
+<div class="card-body">
+<h3>Em desenvolvimento</h3>
+<p>Novos projetos serão adicionados em breve.</p>
+</div>
+</div>
+</div>
 
-    <div class="col-md-4 fade-in">
-      <div class="card h-100">
-        <img src="https://i.postimg.cc/Fr8Rb1Rp/2.png" class="card-img-top">
-        <div class="card-body">
-          <h3>Projeto 3</h3>
-          <p>Descrição.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section id="sobre" class="container mt-5">
-  <h2 class="section-title fade-in">Sobre mim</h2>
+<section id="sobre" class="container py-5">
+<h2 class="section-title fade-in text-center mb-5">Sobre mim</h2>
+<div class="row align-items-center sobre-box fade-in">
+<div class="col-md-4 text-center mb-4 mb-md-0">
+<div class="foto-container">
+<img src="SUA-FOTO.jpg" alt="Laura">
+</div>
+</div>
 
-  <div class="row align-items-center sobre-box fade-in">
-
-    <!-- FOTO -->
-    <div class="col-md-4 text-center mb-4 mb-md-0">
-      <div class="foto-container">
-        <img src="https://i.postimg.cc/1zT9KY9N/1.png" alt="Minha foto">
-      </div>
-    </div>
-
-    <!-- TEXTO -->
-    <div class="col-md-8">
-      <h3 class="mb-3">Oi, eu sou a Laura </h3>
-
-      <p>
-        Desenvolvedora front-end <strong>apaixonada</strong> por criar interfaces bonitas,
-        intuitivas e com personalidade.
-      </p>
-
-      <p>
-        Curto trabalhar com HTML, CSS e JavaScript, e tenho um olhar bem voltado
-        pra UI/UX! Amo deixar tudo visualmente agradável e fácil de usar.
-      </p>
-
-      <p>
-        Atualmente estou estudando e evoluindo meus projetos pra alcançar um nível
-        cada vez mais profissional!
-      </p>
-
-      <!-- SKILLS -->
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Bootstrap</span>
-        <span>Aprendendo Typescript</span>
-        <span>Administração</span>
-      </div>
-    </div>
-
-  </div>
+<div class="col-md-8">
+<h3>Oi, eu sou a Laura 👋</h3>
+<p>Sou desenvolvedora front-end apaixonada por criar interfaces bonitas, intuitivas e responsivas.</p>
+<p>Também gosto da área de design para redes sociais e estou sempre buscando evoluir minhas habilidades em UI/UX.</p>
+<div class="skills">
+<span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>TypeScript</span><span>Figma</span>
+</div>
+</div>
+</div>
 </section>
 
-<footer id="contato" class="footer mt-5">
-  <div class="container">
-    
-    <div class="contact-card text-center">
-
-      <h2 class="mb-3">Contato</h2>
-      <p class="mb-4">Disponível para freelas e projetos!</p>
-      
-
-      <div class="d-flex justify-content-center gap-3 mb-4">
-        
-        <a href="mailto:l.nves4444@gmail.com" class="contact-btn">Email</a>
-      
-
-        <a href="https://github.com/lalallalaura" class="social-btn">
-          <i class="bi bi-github"></i>
-        </a>
-
-      </div>
-
-      <p class="copyright">
-        © 2026 Laura — Todos os direitos reservados
-      </p>
-
-    </div>
-
-  </div>
+<footer id="contato" class="footer">
+<div class="container">
+<div class="contact-card text-center">
+<h2>Contato</h2>
+<p>Disponível para freelas e oportunidades.</p>
+<div class="d-flex justify-content-center gap-3 mt-4">
+<a class="contact-btn" href="mailto:l.nves4444@gmail.com">Email</a>
+<a class="social-btn" target="_blank" href="https://github.com/lalallalaura"><i class="bi bi-github"></i></a>
+</div>
+<p class="copyright mt-4">© 2026 Laura</p>
+</div>
+</div>
 </footer>
 
-<script>
-  
-window.addEventListener("scroll", () => {
-  document.querySelector(".navbar")
-    .classList.toggle("scrolled", window.scrollY > 50);
-});
-
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add("show");
-  });
-},{threshold:0.15});
-
-document.querySelectorAll(".fade-in").forEach(el=>{
-  observer.observe(el);
-});
-
-const btn = document.getElementById("themeToggle");
-
-if(localStorage.getItem("theme")==="light"){
-  document.body.classList.add("light");
-  btn.textContent="☀️";
-}
-
-btn.onclick = ()=>{
-  document.body.classList.toggle("light");
-
-  if(document.body.classList.contains("light")){
-    localStorage.setItem("theme","light");
-    btn.textContent="☀️";
-  } else {
-    localStorage.setItem("theme","dark");
-    btn.textContent="🌙";
-  }
-};
-  const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
